@@ -3,23 +3,26 @@ import { FaArrowUp } from 'react-icons/fa';
 import { useSpring, animated } from 'react-spring';
 import './Compass.css';
 
-const Compass = () => {
-  const [direction, setDirection] = React.useState(0); // Direction in degrees
-  // const [speed, setSpeed] = React.useState(0); // Speed in km/h
+const Compass = ({ weather }) => {
+  const [direction, setDirection] = React.useState(0);
+  const [localSpeed, setLocalSpeed] = React.useState(0);
 
   React.useEffect(() => {
+    if (weather && weather.speed) {
+      setLocalSpeed(weather.speed);
+    }
+    
+    // You might want to use weather's wind direction instead of random direction
     const updateCompass = () => {
-      const newDirection = Math.floor(Math.random() * 360); // Random direction
-      // const newSpeed = Math.floor(Math.random() * 100); // Random speed
-
+      const newDirection = Math.floor(Math.random() * 360);
       setDirection(newDirection);
-      // setSpeed(newSpeed);
     };
 
-    const intervalId = setInterval(updateCompass, 1000); // Update every second
+    // Update direction every second
+    const intervalId = setInterval(updateCompass, 1000);
 
-    return () => clearInterval(intervalId); // Clean up on unmount
-  }, []);
+    return () => clearInterval(intervalId);
+  }, [weather]);
 
   const props = useSpring({ transform: `rotate(${direction}deg)` });
 
@@ -33,10 +36,10 @@ const Compass = () => {
           <FaArrowUp />
         </animated.div>
       </div>
-      {/* <div className="speed">
+      <div className="speed">
         <h2>Speed</h2>
-        <p>{speed} km/h</p>
-      </div> */}
+        <p>{localSpeed} km/h</p>
+      </div>
     </div>
   );
 };

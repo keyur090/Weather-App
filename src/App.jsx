@@ -7,7 +7,7 @@ import NavBar from "./Components/Header/NavBar";
 import getFormattedWeatherData from "./services/weatherservices";
 
 function App() {
-  const [query, setQuery] = useState({ q: "surat" });
+  const [query, setQuery] = useState({ q: "ahmedabad" });
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
 

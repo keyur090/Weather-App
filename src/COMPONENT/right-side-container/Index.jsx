@@ -2,7 +2,6 @@ import AirIcon from "@mui/icons-material/Air";
 import Compass from "../../Components/Cumpas/Compass";
 import "./index.css";
 const IndexRight = ({ weather, setQuery }) => {
-  const { speed } = weather;
 
   const cities = [
     {
@@ -35,11 +34,7 @@ const IndexRight = ({ weather, setQuery }) => {
             <p>Wind</p>
           </div>
           <div className="wind-bottom">
-            <Compass />
-            <div className="speed">
-              <h2>Speed</h2>
-              <p>{speed} km/h</p>
-            </div>
+            <Compass weather={weather} />
           </div>
         </div>
         <div className="con-a mt-4">
@@ -48,7 +43,9 @@ const IndexRight = ({ weather, setQuery }) => {
           </div>
           <div className="city-container">
             {cities.map((city) => (
-              <button key={city.id} onClick={() => setQuery({q: city.title})}>{city.title}</button>
+              <button key={city.id} onClick={() => setQuery({ q: city.title })}>
+                {city.title}
+              </button>
             ))}
           </div>
         </div>
