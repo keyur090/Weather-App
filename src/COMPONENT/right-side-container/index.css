@@ -1,221 +1,79 @@
+/* Main Container for the Right Side */
 .right-side-container {
-    width: 20vw;
-    padding: 20px 20px 20px 0px;
-  }
-.right-side-container .right-top {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .right-side-container .right-top .con-a {
-    width: 100%;
-    height: auto;
-    padding: 22px;
-    background-color: rgba(33, 38, 42, 0.367);
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px 0px rgba(128, 128, 128, 0.475);
-  }
-  
-  .con-a .wind-top {
-    display: flex;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.813);
-    gap: 10px;
-  }
-  
-  .con-a .wind-top .icon-air {
-    width: 20px;
-    height: 20px;
-    align-items: center;
-    color: rgba(255, 255, 255, 0.498);
-  }
-  
-  .con-a .large-city {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.813);
-  }
-  
-  .city-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .city-container button {
-    border: 1px solid rgba(128, 128, 128, 0.326);
-    padding: 7px 0px 7px 10px;
-    font-size: 12px;
-    align-items: start;
-    display: flex;
-    border-radius: 5px;
-  }
-  .con-a .large-city {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.813);
-    margin-bottom: 1rem;
-  }
-
-.con-a{
-    width: 20vw;
+  width: 20vw; /* Set the width of the right container */
+  padding: 20px 20px 20px 0; /* Padding for spacing */
+  overflow: hidden; /* Prevent any child from overflowing */
 }
-  
-  .city-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .city-container button {
-    border: 1px solid rgba(128, 128, 128, 0.326);
-    padding: 5px 0px 5px 10px;
-    font-size: 11px;
-    align-items: start;
-    display: flex;
-    border-radius: 5px;
-  }
-  .city-container button:hover{
-    border: 1px solid rgba(250, 128, 114, 0.422);
-  }
 
-  @media (max-width: 1200px) {
-    .left-side-container,
-    .center-side-container,
-    .right-side-container {
-      width: 33.33vw;
-    }
-  }
-  
-  @media (max-width: 900px) {
-    .left-side-container,
-    .center-side-container,
-    .right-side-container {
-      width: 100%;
-    }
-  
-    .container-dash {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    .left-side-container,
-    .center-side-container,
-    .right-side-container {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  
-    .left-side-container .top-container,
-    .center-side-container .air-pollution,
-    .center-side-container .sunset,
-    .right-side-container .right-top .con-a {
-      padding: 15px;
-      box-shadow: 0px 0px 4px 0px rgba(128, 128, 128, 0.475);
-    }
-  
-    .temp {
-      font-size: 4rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .temp {
-      font-size: 3rem;
-    }
-  
-    .bottomm-con {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .bottomm-con p {
-      font-size: 1rem;
-    }
-  
-    .center-side-container .searchBar {
-      width: 100%;
-      font-size: 12px;
-    }
-  
-    .center-side-container .search-container {
-      width: 100%;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .temp {
-      font-size: 2.5rem;
-    }
-  
-    .bottomm-con {
-      flex-direction: column;
-      gap: 8px;
-    }
-  
-    .bottomm-con p {
-      font-size: 0.875rem;
-    }
-  
-    .bottom-con {
-      flex-direction: column;
-    }
-  
-    .bottom-con .container-a,
-    .bottom-con .container-b,
-    .bottom-con .container-c {
-      width: 100%;
-      margin-top: 0;
-    }
-  
-    .center-side-container .searchBar {
-      width: 100%;
-      font-size: 12px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .container-dash {
-      margin: 0px 10px;
-    }
-  
-    .left-side-container,
-    .center-side-container,
-    .right-side-container {
-      padding: 10px;
-    }
-  
-    .center-side-container .top-con {
-      flex-direction: column;
-    }
-  
-    .today-forecast {
-      font-size: 9px;
-    }
-  
-    .today-forecast span {
-      font-size: 14px;
-    }
-  
-    .right-Index {
-      width: 100%;
-      margin-left: 0;
-    }
-  
-    .center-side-container .air-pollution,
-    .center-side-container .sunset,
-    .right-side-container .right-top .con-a {
-      width: 100%;
-      margin-top: 0;
-    }
-  }
+/* Top Section within the Right Container */
+.right-side-container .right-top {
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+}
 
-  
-  @media (max-width: 1200px) {
+/* Style for Compass Container */
+.right-side-container .right-top .con-a {
+  width: 100%; /* Full width to prevent overflow */
+  max-width: 100%; /* Prevent overflow */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  padding: 17px; /* Padding for inner spacing */
+  background-color: rgba(33, 38, 42, 0.367); /* Background color */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0px 0px 5px 0px rgba(128, 128, 128, 0.475); /* Shadow effect */
+}
+
+/* Wind Top Section within Compass */
+.con-a .wind-top {
+  display: flex; /* Flexbox for alignment */
+  font-size: 14px; /* Font size for text */
+  color: rgba(255, 255, 255, 0.813); /* Text color */
+  gap: 10px; /* Gap between items */
+}
+
+/* Icon Styles */
+.con-a .wind-top .icon-air {
+  width: 20px; /* Icon width */
+  height: 20px; /* Icon height */
+  color: rgba(255, 255, 255, 0.498); /* Icon color */
+}
+
+/* Large City Text Style */
+.con-a .large-city {
+  font-size: 14px; /* Font size */
+  color: rgba(255, 255, 255, 0.813); /* Text color */
+  margin-bottom: 1rem; /* Spacing below */
+}
+
+/* Container for City Buttons */
+.city-container {
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Gap between buttons */
+}
+
+/* Button Styles */
+.city-container button {
+  border: 1px solid rgba(128, 128, 128, 0.326); /* Border style */
+  padding: 7px 0 7px 10px; /* Padding for button */
+  font-size: 12px; /* Font size */
+  display: flex; /* Flexbox for alignment */
+  align-items: start; /* Align items to the start */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Button Hover Effect */
+.city-container button:hover {
+  border: 1px solid rgba(250, 128, 114, 0.422); /* Change border color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
   .left-side-container,
   .center-side-container,
   .right-side-container {
-    width: 33.33vw;
+      width: 33.33vw; /* Adjust width for medium screens */
   }
 }
 
@@ -223,121 +81,116 @@
   .left-side-container,
   .center-side-container,
   .right-side-container {
-    width: 100%;
+      width: 100%; /* Full width for smaller screens */
   }
-
+  
   .container-dash {
-    flex-direction: column;
-    align-items: stretch;
+      flex-direction: column; /* Stack containers */
+      align-items: stretch; /* Stretch items */
   }
-
-  .left-side-container,
-  .center-side-container,
-  .right-side-container {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
+  
   .left-side-container .top-container,
   .center-side-container .air-pollution,
   .center-side-container .sunset,
   .right-side-container .right-top .con-a {
-    padding: 15px;
-    box-shadow: 0px 0px 4px 0px rgba(128, 128, 128, 0.475);
+      padding: 15px; /* Adjust padding */
+      box-shadow: 0px 0px 4px 0px rgba(128, 128, 128, 0.475); /* Shadow effect */
   }
 
   .temp {
-    font-size: 4rem;
+      font-size: 4rem; /* Adjust font size */
   }
 }
 
 @media (max-width: 768px) {
   .temp {
-    font-size: 3rem;
+      font-size: 3rem; /* Adjust font size */
   }
 
   .bottomm-con {
-    flex-direction: column;
-    gap: 10px;
+      flex-direction: column; /* Stack items */
+      gap: 10px; /* Gap between items */
   }
 
   .bottomm-con p {
-    font-size: 1rem;
+      font-size: 1rem; /* Font size */
   }
 
   .center-side-container .searchBar {
-    width: 100%;
-    font-size: 12px;
+      width: 100%; /* Full width for search bar */
+      font-size: 12px; /* Font size */
   }
 
   .center-side-container .search-container {
-    width: 100%;
+      width: 100%; /* Full width for search container */
   }
 }
 
 @media (max-width: 600px) {
   .temp {
-    font-size: 2.5rem;
+      font-size: 2.5rem; /* Adjust font size */
   }
 
   .bottomm-con {
-    flex-direction: column;
-    gap: 8px;
+      flex-direction: column; /* Stack items */
+      gap: 8px; /* Gap between items */
   }
 
   .bottomm-con p {
-    font-size: 0.875rem;
+      font-size: 0.875rem; /* Font size */
   }
 
   .bottom-con {
-    flex-direction: column;
+      flex-direction: column; /* Stack items */
   }
 
   .bottom-con .container-a,
   .bottom-con .container-b,
   .bottom-con .container-c {
-    width: 100%;
-    margin-top: 0;
+      width: 100%; /* Full width for bottom containers */
+      margin-top: 0; /* Remove top margin */
   }
 
   .center-side-container .searchBar {
-    width: 100%;
-    font-size: 12px;
+      width: 100%; /* Full width for search bar */
+      font-size: 12px; /* Font size */
   }
 }
 
 @media (max-width: 480px) {
   .container-dash {
-    margin: 0px 10px;
+      margin: 0px 10px; /* Adjust margin */
   }
 
   .left-side-container,
   .center-side-container,
   .right-side-container {
-    padding: 10px;
+      padding: 10px; /* Adjust padding */
   }
 
   .center-side-container .top-con {
-    flex-direction: column;
+      flex-direction: column; /* Stack items */
   }
 
   .today-forecast {
-    font-size: 9px;
+      font-size: 9px; /* Adjust font size */
   }
 
   .today-forecast span {
-    font-size: 14px;
+      font-size: 14px; /* Adjust font size */
   }
 
   .right-Index {
-    width: 100%;
-    margin-left: 0;
+      width: 100%; /* Full width for index */
+      margin-left: 0; /* Remove left margin */
   }
 
   .center-side-container .air-pollution,
   .center-side-container .sunset,
   .right-side-container .right-top .con-a {
-    width: 100%;
-    margin-top: 0;
+      width: 100%; /* Full width for air pollution and sunset */
+      margin-top: 0; /* Remove top margin */
   }
 }
+
+

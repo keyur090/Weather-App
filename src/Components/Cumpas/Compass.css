@@ -7,7 +7,7 @@
 
 .compass {
   position: relative;
-  width: 80px; /* Smaller size for compact view */
+  width: 80px; 
   height: 80px;
   border: 3px solid #333;
   border-radius: 50%;
@@ -40,12 +40,12 @@
 
 .speed h2 {
   margin: 0;
-  font-size: 0.8rem; /* Smaller font size for compact view */
+  font-size: 0.8rem; 
   color: #333;
 }
 
 .speed p {
-  font-size: 1.2rem; /* Smaller font size for compact view */
+  font-size: 1.2rem; 
   margin: 0;
   font-weight: bold;
   color: #e74c3c;
